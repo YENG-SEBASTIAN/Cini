@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MovieAPI.Models.Data.MovieDTO
+namespace MovieAPI.Models.Data.MovieDTO;
+public class MovieDTO
 {
-    public class MovieDTO
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        public string Title { get; set; }
+    public string Title { get; set; }
 
-        public string Genre { get; set; }
+    public string Genre { get; set; }
 
-        public DateTime ReleaseYear {get; set;} = DateTime.Now;
-    }
+    public DateTime ReleaseYear { get; set; } = DateTime.Now;
 }
