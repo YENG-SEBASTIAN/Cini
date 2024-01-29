@@ -1,15 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MovieAPI.Models.Data.MovieDTO;
+using MovieAPI.Models.Data.DTO;
 
-namespace MovieAPI.Models.Data.Repository;
-public interface IMovie
+namespace MovieAPI.Models.Data.Repository
 {
-    Task<bool> AddMovies(AddMovieDTO model);
-    Task<List<MovieDTO>> GetMovies();
-    Task<MovieDTO> GetMovieById(int id);
-    Task<bool> UpdateMovie(AddMovieDTO model);
-    Task<bool> DeleteMovie(int id);
+    public interface IMovie
+    {
+        Task<bool> AddMovieAsync(AddMovieDTO model);
+        Task<bool> UpdateMovieAsync(AddMovieDTO model, int id);
+        Task<List<MovieDTO>> GetMoviesAsync();
+        Task<MovieDTO> GetMovieByIdAsync(int id);
+        Task<bool> DeleteMovieAsync(int id);
+
+    }
 }
